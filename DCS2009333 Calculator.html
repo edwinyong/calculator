@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>This is a calculator</title>
+    </head>
+    <body>
+        <h1>This is a calculator</h1>
+        Number 1: <input type="number" id="num1" name="num1"><br>
+        Number 2: <input type="number" id="num2" name="num2">
+        <hr>
+        <button type="button" onclick="Plus()">Plus</button>
+        <button type="button" onclick="Minus()">Minus</button>
+        <button type="button" onclick="Multiply()">Multiply</button>
+        <button type="button" onclick="Division()">Division</button>
+        <hr>
+        <p>1. if the total is < 10 then the answer should be in red color</p>
+        <p>2. if the total is between 10 and 30 then the answer should be in red color</p>
+        <p>3. if the total is > 30 then the answer should be in black color</p>
+        <hr>
+        <div id="answer">
+            <p id=output></p>
+        </div>
+        <script>
+            function Plus(){
+                var n1 = parseFloat(document.getElementById("num1").value);
+                var n2 = parseFloat(document.getElementById("num2").value);
+                document.getElementById("output").innerHTML= n1 + " " + '+' + " " + n2 + " " + "=" + " " +parseFloat(n1+n2);
+                if(parseFloat(n1+n2) <= 10){  
+                    var a = document.getElementById("output");
+                    a.style.color="red"
+                }
+                if(parseFloat(n1+n2) >= 10 && parseFloat(n1+n2) <= 30){  
+                    var a = document.getElementById("output");
+                    a.style.color="blue"
+                }
+                if(parseFloat(n1+n2) >= 30){  
+                    var a = document.getElementById("output");
+                    a.style.color="green"
+                }
+            }
+            function Minus(){
+                var n1 = parseFloat(document.getElementById("num1").value);
+                var n2 = parseFloat(document.getElementById("num2").value);
+                document.getElementById("output").innerHTML= n1 + " " + '-' + " " + n2 + " " + "=" + " " +parseFloat(n1-n2)
+                if(parseFloat(n1-n2) <= 10){  
+                    var a = document.getElementById("output");
+                    a.style.color="red"
+                }
+                if((parseFloat(n1-n2) >= 10)&&(parseFloat(n1-n2) <= 30)){  
+                    var a = document.getElementById("output");
+                    a.style.color="blue"
+                }
+                if((parseFloat(n1-n2) >= 30)){  
+                    var a = document.getElementById("output");
+                    a.style.color="green"
+                }
+            }
+            function Multiply(){
+                var n1 = parseFloat(document.getElementById("num1").value);
+                var n2 = parseFloat(document.getElementById("num2").value);
+                document.getElementById("output").innerHTML= n1 + " " + 'x' + " " + n2 + " " + "=" + " " +parseFloat(n1*n2)
+                if(parseFloat(n1*n2) <= 10){  
+                    var a = document.getElementById("output");
+                    a.style.color="red"
+                }
+                if((parseFloat(n1*n2) >= 10)&&(parseFloat(n1*n2) <= 30)){  
+                    var a = document.getElementById("output");
+                    a.style.color="blue"
+                }
+                if((parseFloat(n1*n2) >= 30)){  
+                    var a = document.getElementById("output");
+                    a.style.color="green"
+                }
+            }
+            function Division(){
+                var n1 = parseFloat(document.getElementById("num1").value);
+                var n2 = parseFloat(document.getElementById("num2").value);
+                document.getElementById("output").innerHTML= n1 + " " + '/' + " " + n2 + " " + "=" + " " +parseFloat(n1/n2)
+                if(parseFloat(n1/n2) <= 10){  
+                    var a = document.getElementById("output");
+                    a.style.color="red"
+                }
+                if((parseFloat(n1/n2) >= 10)&&(parseFloat(n1/n2) <= 30)){  
+                    var a = document.getElementById("output");
+                    a.style.color="blue"
+                }
+                if((parseFloat(n1/n2) >= 30)){  
+                    var a = document.getElementById("output");
+                    a.style.color="green"
+                }
+            }
+
+            
+            
+        </script>
+    </body>
+</html>
